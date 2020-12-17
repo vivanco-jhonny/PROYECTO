@@ -1,0 +1,116 @@
+:root
+{
+    /* Load Material Constant */
+
+    /* material theme background */
+    --ThemeDark-Background: rgb(20, 20, 20);
+
+    /* material theme color */
+    --ThemeDark-Color-Primary: rgb(0, 0, 0);
+    --ThemeDark-Color-Secundary: rgb(125, 125, 150);
+    --ThemeDark-Color-Text-Primary: rgb(210, 210, 210);
+    --ThemeDark-Color-Text-Danger: red;
+
+    /* material theme background buttons */
+    --ThemeDark-Background-Button-Login-Start: rgba(0, 38, 255, 0.2);
+    --ThemeDark-Background-Button-Manager-Primary: rgb(37, 37, 255);
+    --ThemeDark-Background-Button-Manager-Secondary: rgba(70, 70, 122, 0.3);
+    --ThemeDark-Background-Button-Manager-Warning: red;
+    --ThemeDark-Background-Button-Manager-Danger: rgba(255, 0, 0, 0.5);
+
+    /* material font family */
+    --Font-Family-Primary: UI Segoe;
+
+    /* material font size */
+    --Font-Size-Primary: 20px;
+    --Font-Size-Manager: 12px;
+
+    /* material radius */
+    --Border-Radius-Button-Login: 10px;
+    --Border-Radius-Button-Manager: 20px;
+
+    /* material backdrop filter */
+    --BackDrop-Filter-Primary: blur(30px);
+    --BackDrop-Filter-Secondary: blur(30px);
+}
+
+
+body
+{
+    cursor: default;
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--ThemeDark-Background);
+}
+
+h1
+{
+    color: var(--ThemeDark-Color-Primary);
+}
+
+.Button-Manager-Primary, 
+.Button-Manager-Warning, 
+.Button-Manager-Danger
+{
+    width: 40px;
+    height: 40px;
+    color: var(--ThemeDark-Color-Primary);
+    margin: 5px 5px 5px 5px;
+    outline: none;
+    font-size: var(--Font-Size-Manager);
+    border-radius: var(--Border-Radius-Button-Manager);
+    backdrop-filter: var(--BackDrop-Filter-Primary);
+    transform: scale(1);
+    transition: all 0.1s ease;
+}
+
+.Button-Manager-Primary
+{
+    background: var(--ThemeDark-Background-Button-Manager-Primary);
+    border: 1px solid var(--ThemeDark-Background-Button-Manager-Primary);
+    box-shadow: 0px 5px 50px -2px  var(--ThemeDark-Background-Button-Manager-Primary);
+}
+
+.Button-Manager-Warning
+{
+    background: var(--ThemeDark-Background-Button-Manager-Warning);
+    border: 1px solid var(--ThemeDark-Background-Button-Manager-Warning);
+    box-shadow: 0px 5px 50px -2px var(--ThemeDark-Background-Button-Manager-Warning);
+}
+
+.Button-Manager-Danger
+{
+    background: none;
+    color: red;
+    border: 1px red;
+    border-style: dashed;
+}
+
+.Button-Manager-Primary:hover, 
+.Button-Manager-Warning:hover, 
+.Button-Manager-Danger:hover
+{
+    filter: grayscale();
+}
+
+.Button-Manager-Primary:active, 
+.Button-Manager-Warning:active, 
+.Button-Manager-Danger:active
+{
+    filter: invert();
+}
+
+.btn
+{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 200px;
+    border: none;
+    outline: none;
+    height: 200px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 5px rgb(44, 44, 44);
+}
